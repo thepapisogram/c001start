@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | C001</title>
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="static/main.css">
+</head>
+
+<body>
+  <!-- your magic goes here -->
+
+  	<!-- Get User Name and Profile Select -->
+  	<div id="overlay">
+  		<div class="col-10 col-md-4 col-lg-3 shadow p-2 p-md-4" id="user">
+  			<p class="text-center mb-0 lead text-primary">Hey There!</p>
+  			<p class="text-center mb-0">Enter your name to continue</p>
+  			<input type="text" placeholder="username" class="form-control" id='user_name'>
+  			<small class="text-danger mt-1 text-center" id="user_error">Please provide a name</small>
+  			<small class="text-danger mt-1 text-center" id="user_error_two">Must be 5 or more letters</small>
+  			<button class="btn btn-sm btn-primary" id='user_continue'>Continue</button>
+  		</div>
+  	</div>
+
+	<div class="row m-0 px-1 py-1 pt-md-3 px-md-0 col-12 col-md-10" id="inner_container">
+		<div class="col-sm-12 col-md-7 mb-3 mb-md-0" id="image_container">
+			<img class="shadow" src="" id='image'>
+		</div>
+		<div class="col-12 col-md-4 p-0 pl-md-3 m-0 text-left">
+			<div class="p-0 m-0" id='caption_container'>
+				<div class="pl-2 mb-2" id="caption_inner_container">
+					<p id='caption_title'>Caption</p>
+					<p id="caption">Loading...</p>
+				</div>
+				<button class="btn btn-sm btn-outline-primary mr-2" id='prev'>Previous</button>
+				<button class="btn btn-sm btn-primary mr-2" id='next'>Next</button>
+				<button class="btn btn-sm btn-outline-primary tool" id='go_dark'>Dark Theme</button>
+				<button class="btn btn-sm btn-outline-warning tool" id='go_light'>Light Theme</button>
+			</div>
+		</div>
+		<div class="col-12 col-md-6 mt-4 mx-0 px-0" id="comments_container">
+			<p class="px-1 px-md-0 mb-2" id="comment_title">Comments</p>
+			<ul class="px-1 px-md-0" id="comments">
+				<li class="comment">
+					<p>Loading...</p>
+				</li>
+			</ul>
+			<div class="p-2 p-md-0 pb-0 input-group">
+				<input type="text" class="form-control rounded-left" id='comment' placeholder="Your comment">
+				<div class="input-group-append">
+					<button class="btn btn-primary rounded-right" id="make_comment">Comment</button>
+				</div>
+			</div>
+			<small id="comment_subtitle" class="p-2 p-md-0 pb-0 mt-1">Express your thoughts 😁</small>
+		</div>
+	</div>
+
+  <script src="static/main.js"></script>
+</body>
+
+</html>
