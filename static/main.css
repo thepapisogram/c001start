@@ -1,0 +1,258 @@
+/*
+If you don't like this font, you can go to https://fonts.google.com/ to find a font of your choice
+*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
+
+@font-face{
+	font-family: samsung;
+	src: url('samsung.ttf');
+}
+body {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: samsung;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* Disable Highlight for Non-input Elements*/
+  user-select: none;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Overlay & User Details Form */
+#overlay{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	overflow: hidden;
+	z-index: 3;
+}
+
+#user{
+	background: white;
+	border-radius: 5px;
+	height: max-content;
+}
+
+#user_name{
+	background: white;
+	color: #007bff;
+	border: none;
+	border-bottom: 2px solid #007bff;
+	text-align: center;
+	border-radius: 5px;
+	margin-top: 5px;
+	box-shadow: none;
+	transition: 100ms linear;
+}
+
+#user_name:focus{
+	background: white;
+	color: #007bff;
+	box-shadow: none;
+	letter-spacing: 2px;
+	transition: 100ms linear;
+}
+
+#user_name::placeholder{
+	color: rgba(0, 123, 255, 0.7);
+}
+
+#user_continue{
+	display: block;
+	width: max-content;
+	margin-left: auto;
+	margin-top: 10px;
+}
+
+#user_error, #user_error_two{
+	display: none;
+	font-weight: bold;
+}
+
+
+
+#inner_container{
+	height: max-content;
+	border-radius: 5px;
+}
+
+
+/* Image & Image Container */
+#image_container{
+	margin: 0;
+	padding: 0;
+	height: max-content;
+}
+
+#image{
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+	padding: 0px;
+	transition: 1s linear!important;
+}
+
+
+/* Caption Container */
+#caption_container{
+	height: max-content;
+	overflow: hidden;
+}
+
+#caption_inner_container{
+	border-left-width: 1.5px;
+	border-left-style: solid;
+}
+
+#caption_title{
+	font-size: 17px;
+	color: #007bff;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#caption{
+	font-size: 17px;
+	margin: 0;
+}
+
+.tool{
+	box-shadow: none!important;
+	transition: 100ms linear!important;
+}
+
+#prev{
+	box-shadow: none!important;
+	transition: 100ms linear!important;
+}
+
+#next{
+	box-shadow: none!important;
+	transition: 100ms linear!important;
+}
+
+
+/* Comments */
+#comments_container{
+	height: max-content;
+	padding-left: 0;
+	font-weight: bold;
+	font-size: 17px;
+}
+#comment_subtitle{
+	display: block;
+	text-align: left;
+	font-size: 14.5px;
+	padding: 5px;
+}
+
+#comment_title{
+	text-align: left;
+}
+
+
+/* Individual Comments */
+.comment{
+	display:flex;
+	align-items: center;
+	flex-wrap:wrap;
+	margin-left:-15px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	height: max-content;
+	width: 100%;
+	list-style: none;
+}
+
+.comment-avatar-container, .comment-details-container{
+	padding: 0!important;
+}
+
+.comment-avatar-container{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	min-width: 54px;
+	width: 20%;
+	max-width: 59px;
+	height: max-content;
+	margin: 0;
+	margin-top: 0;
+	margin-bottom: auto;
+}
+
+.comment-avatar{
+	width: 50px;
+	height: 50px;
+	border-width: 2px;
+	border-style: solid;
+	padding: 2px;
+	border-radius: 5px;
+	object-fit: cover;
+	transition: 200ms linear!important;
+}
+
+.comment-avatar:hover{
+	border-radius: 50%;
+}
+
+.comment-details-container{
+	width: 80%;
+	max-width: 90%;
+	height: max-content;
+}
+
+.comment-name{
+	font-weight: bold;
+	font-size: 15px;
+	margin: 0;
+}
+
+.comment-body{
+	height: max-content;
+	word-wrap: break-word;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+
+
+/* Input and Button */
+#comment{
+	transition: 100ms linear!important;
+}
+
+#make_comment{
+	transition: 100ms linear!important;
+}
+
+/* Theme Buttons */
+#go_dark, #go_light{
+	display: none;
+}
+
+/* Loading */
+.loading{
+	color: #007bff;
+}
+
+/*
